@@ -1,0 +1,9 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/wifi-tracing/server.git
+[submodule "client"]
+	path = client
+	url = https://github.com/wifi-tracing/client.git
+[submodule "android-app"]
+	path = android-app
+	url = https://github.com/wifi-tracing/android-app.git
