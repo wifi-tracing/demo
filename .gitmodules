@@ -1,9 +1,9 @@
 [submodule "server"]
 	path = server
-	url = git@github.com:wifi-tracing/client.git
+	url = git@github.com:wifi-tracing/server.git
 [submodule "client"]
 	path = client
-	url = git@github.com:wifi-tracing/server.git
+	url = git@github.com:wifi-tracing/client.git
 [submodule "android-app"]
 	path = android-app
 	url = git@github.com:wifi-tracing/android-app.git
