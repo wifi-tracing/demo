@@ -10,3 +10,7 @@
 	path = android-app
 	url = git@github.com:wifi-tracing/android-app.git
 	branch = main
+[submodule "caching-function"]
+	path = caching-function
+	url = git@github.com:wifi-tracing/caching-function.git
+	branch = main
