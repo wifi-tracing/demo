@@ -28,15 +28,15 @@ the following characteristics:
 This document will walk you through installing and running the various software modules for
 this work.
 It assumes that you have a working version of **Docker** and **Docker Compose** running
-on your machine. To learn more, please consult Docker’s Installation Guide^1 and Docker
-Compose’s Installation Guide^2.
+on your machine. To learn more, please consult Docker’s Installation Guide [^1] and Docker
+Compose’s Installation Guide[^2].
 Moreover, it assumes you are running on a **GNU/Linux distribution based on Debian**.
 While this is not a strict requirement, it is advised.
 
-(^1) Available at [https://docs.docker.com/engine/install](https://docs.docker.com/engine/install) as of the 1st of April, 2021
+[^1]: Available at [https://docs.docker.com/engine/install](https://docs.docker.com/engine/install) as of the 1st of April, 2021
 
 
-(^2) Available at [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/) as of 1 stof April, 2021
+[^2]: Available at [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/) as of 1 stof April, 2021
 
 ### Installing Server and Web Application
 
@@ -47,7 +47,7 @@ der the _server_ folder. Similarly, the Web Application (named _client_ ), will 
 [http://localhost:3000.](http://localhost:3000.)
 
 Before starting, make sure no processes are running on at ports `3000` , `4683` , and `27017`. This
-includes stopping any existing mongod services that might be running on port 27017.
+includes stopping any existing mongod services that might be running on port 27017[^3].
 If you have installed `npm` on your machine, you can kill all processes running on these ports
 by using the following:
 ```zsh
@@ -63,7 +63,7 @@ Compose, run the following command from the root folder of the project.
 docker -compose up
 ```
 
-The Server runs on the PM2^4 process manager. By default it will use **all** the cores available
+The Server runs on the PM2[^4] process manager. By default it will use **all** the cores available
 to it. To change this option, modify the `instances` property in the `ecosystem.config.js` file to the number of cores you want (e.g. `instances : 1`).
 
 The process might take a while. Please wait for the client to be running.
@@ -75,18 +75,18 @@ in the project files at `server/README.md` and `client/README.md`.
 ### Installing the Android Application
 
 The Android Application can be installed using the `app.apk` package found under the _android-app_
-folder, which can be manually installed on an Android Device. An article from **thecustomdroid**^5 walks through the process in detail.
+folder, which can be manually installed on an Android Device. An article from **thecustomdroid**[^5] walks through the process in detail.
 
-(^3) On Ubuntu 20.04, you can use `sudo systemctl stop mongod`
+[^3]: On Ubuntu 20.04, you can use `sudo systemctl stop mongod`
 
-(^4) Package available at [https://www.npmjs.com/package/pm2](https://www.npmjs.com/package/pm2) as of 1st of April 2021
+[^4]: Package available at [https://www.npmjs.com/package/pm2](https://www.npmjs.com/package/pm2) as of 1st of April 2021
 
-(^5) Available at [https://www.thecustomdroid.com/how-to-install-apk-on-android](https://www.thecustomdroid.com/how-to-install-apk-on-android) as of 1st of April 2021
+[^5]: Available at [https://www.thecustomdroid.com/how-to-install-apk-on-android](https://www.thecustomdroid.com/how-to-install-apk-on-android) as of 1st of April 2021
 
 
 **Non-apk Installation**
 In order to install the Android Application without the use of an apk file, you’ll need to install
-Android Studio^6 and follow the steps described in the official documentation^7.
+Android Studio[^6] and follow the steps described in the official documentation[^7].
 
 ### Caching Function
 
@@ -115,9 +115,9 @@ The Docker installation contains a pre-packaged configuration in the form of an 
 it is useful to demo and run the application, it is important to change the values for security
 reasons for extensive use. An overview of the used .env values is available at Table E.1.
 
-(^6) Available at [https://developer.android.com/studio/install](https://developer.android.com/studio/install) as of 1st of April 2021
+[^6]: Available at [https://developer.android.com/studio/install](https://developer.android.com/studio/install) as of 1st of April 2021
 
-(^7) Available at [https://developer.android.com/studio/run](https://developer.android.com/studio/run) as of 1st of April 2021
+[^7]: Available at [https://developer.android.com/studio/run](https://developer.android.com/studio/run) as of 1st of April 2021
 
 
 | Name                   	| Description                                              	|
@@ -190,12 +190,14 @@ each module.
 
 The Server does not contain any User Interface, as its main role is that of an API. However,
 Users that wish can access an interactive documentation HTML page generate through the
-Swagger library^8.
-In order to access it, simply open a web browser athttp://<DOMAIN>:<PORT>/api-docs^9.
+Swagger library[^8].
+In order to access it, simply open a web browser athttp://<DOMAIN>:<PORT>/api-docs[^9].
 You will be able to test the supported endpoints by clicking on the **Try it out** button. Make
 sure that the Server is running and the database is connected.
 
-(^89) More information available at https://swagger.io/
+[^8]: More information available at https://swagger.io/
+For the default dockerised configuration, go to http://localhost:4683/api-docs/
+[^9]: More information available at https://swagger.io/
 For the default dockerised configuration, go to http://localhost:4683/api-docs/
 
 
